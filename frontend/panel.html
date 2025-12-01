@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel ADMIN / USER</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="title">Panel del Sistema</h1>
+
+    <!-- BLOQUE INFO DEL SERVIDOR -->
+    <div class="card">
+        <h2>Datos del Servidor</h2>
+        <form id="jsonForm"></form>
+        <p id="panelMsg"></p>
+    </div>
+
+    <!-- CRUD DE PRODUCTOS -->
+    <div class="card">
+        <h2>Gestión de Productos</h2>
+
+        <!-- LISTADO -->
+        <div id="products-list"></div>
+
+        <!-- FORM CREAR PRODUCTO -->
+        <div id="createProductSection" class="hidden">
+            <h3>Crear Producto</h3>
+            <input id="newProductName" placeholder="Nombre">
+            <input id="newProductPrice" placeholder="Precio" type="number">
+            <input id="newProductStock" placeholder="Stock" type="number">
+            <button class="primary" onclick="createProduct()">Crear</button>
+        </div>
+
+        <!-- FORM EDITAR PRODUCTO -->
+        <div id="editProductContainer" class="hidden">
+            <h3>Editar Producto</h3>
+            <input type="hidden" id="editProductId">
+            <input id="editProductName">
+            <input id="editProductPrice" type="number">
+            <input id="editProductStock" type="number">
+            <button class="primary" onclick="updateProduct()">Actualizar</button>
+        </div>
+
+    </div>
+
+    <button class="secondary" onclick="logout()">Cerrar sesión</button>
+
+</div>
+
+<script src="panel.js"></script>
+</body>
+</html>

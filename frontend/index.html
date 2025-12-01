@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth Frontend Mejorado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="title">Sistema de Autenticación</h1>
+
+    <!-- NAV TABS -->
+    <div class="tabs">
+        <button class="tab-btn active" id="btnShowLogin">Iniciar Sesión</button>
+        <button class="tab-btn" id="btnShowRegister">Registrarse</button>
+    </div>
+
+    <!-- LOGIN CARD -->
+    <div class="card" id="loginCard">
+        <h2>Iniciar Sesión</h2>
+        <input id="logUser" placeholder="Usuario">
+        <input id="logPass" type="password" placeholder="Contraseña">
+        <button class="primary" id="loginBtn">Ingresar</button>
+        <p class="message" id="loginMsg"></p>
+    </div>
+
+    <!-- REGISTER CARD -->
+    <div class="card hidden" id="registerCard">
+        <h2>Registro</h2>
+        <input id="regUser" placeholder="Usuario">
+        <input id="regPass" type="password" placeholder="Contraseña">
+        <select id="regRole">
+            <option value="USER">Usuario</option>
+            <option value="ADMIN">Administrador</option>
+        </select>
+        <button class="primary" id="registerBtn">Crear Cuenta</button>
+        <p class="message" id="regMsg"></p>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
