@@ -23,8 +23,8 @@ public class JwtUtil {
 
         return Jwts.builder()
                 .setSubject(username)
-                .claim("role", role.name())                // 👈 AÑADIDO
-                .claim("permissions", permissions)         // 👈 AÑADIDO
+                .claim("role", role.name())
+                .claim("permissions", permissions)
                 .claim("authorities", role.getAuthorities())
                 .setExpiration(new Date(System.currentTimeMillis()+3600_000))
                 .signWith(key)

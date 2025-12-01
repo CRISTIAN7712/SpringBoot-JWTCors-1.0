@@ -57,10 +57,8 @@ public class SecurityConfig {
                 "Accept"
         ));
 
-        // Muy importante si usas JWT + fetch con credentials
         config.setAllowCredentials(true);
 
-        // Recomendado: permite que el browser exponga cabeceras seguridad
         config.setExposedHeaders(List.of("Authorization"));
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
